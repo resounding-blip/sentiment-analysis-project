@@ -69,7 +69,7 @@ def save_model(model: Pipeline, model_path: str) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data", default="data/train.csv")
+    parser.add_argument("--data", default="data/sentiments.csv")
     parser.add_argument("--out", default="models/sentiment.joblib")
     
     args: argparse.Namespace = parser.parse_args()
