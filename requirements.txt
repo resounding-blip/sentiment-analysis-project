@@ -1,15 +1,4 @@
-iniconfig @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_ba93zhdgbo/croot/iniconfig_1752653743225/work
-joblib==1.2.0
-numpy==2.3.2
-packaging @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_b31rpdx1of/croot/packaging_1753775365574/work
-pandas==2.2.2
-pluggy @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_bei6q1cvvt/croot/pluggy_1733169621717/work
-Pygments @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_f0f10r98sf/croot/pygments_1744664126614/work
-pytest @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_11pwnam6uk/croot/pytest_1750675206319/work
-python-dateutil==2.9.0.post0
-pytz==2025.2
 scikit-learn==1.7.1
-scipy==1.16.1
-six==1.17.0
-threadpoolctl==3.6.0
-tzdata==2025.2
+pandas==2.2.2
+joblib==1.2.0
+pytest==8.4.1
