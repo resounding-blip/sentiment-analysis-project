@@ -10,7 +10,10 @@ def load_model(model_path: str) -> Any:
     return load(model_path)
 
 
-def predict_texts(classifier: Any, input_texts: list[str]) -> tuple[list[int], list[float | None]]:
+def predict_texts(
+        classifier: Any, 
+        input_texts: list[str]
+) -> tuple[list[int], list[float | None]]:
     """Return labels and probability-of-positive for each text."""
     preds: NDArray[Any] = classifier.predict(input_texts)
     if hasattr(classifier, "predict_proba"):
@@ -21,7 +24,11 @@ def predict_texts(classifier: Any, input_texts: list[str]) -> tuple[list[int], l
     return preds.astype(int).tolist(), probs
 
 
-def format_prediction_lines(texts: list[str], preds: list[int], probs: list[float | None]) -> list[str]:
+def format_prediction_lines(
+        texts: list[str], 
+        preds: list[int], 
+        probs: list[float | None]
+) -> list[str]:
     """Return tab-separated CLI output lines for each input text."""
     lines: list[str] = []
     for text, pred, prob in zip(texts, preds, probs):
@@ -32,7 +39,10 @@ def format_prediction_lines(texts: list[str], preds: list[int], probs: list[floa
     return lines
 
 
-def main(model_path: str, input_texts: list[str]) -> None:
+def main(
+        model_path: str, 
+        input_texts: list[str]
+) -> None:
     classifier = load_model(model_path)
     preds, probs = predict_texts(classifier, input_texts)
     for line in format_prediction_lines(input_texts, preds, probs):
